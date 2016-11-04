@@ -1,0 +1,62 @@
+\chapter*{Diceware Guide}
+
+\includegraphics[width=\textwidth]{password_strength.png}
+
+\newpage
+\small
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+\subsubsection*{What is a Diceware passphrase?}
+
+A passphrase is a bunch of words and characters that you type in to your computer to let it know for sure that the person typing is you. Passphrases differ from passwords only in length.
+
+Diceware is a method for picking passphrases that uses dice to select words at random from a special list. Each word in the list is preceded by a four digit number. All the digits are between one and six, allowing you to use the outcomes of four dice rolls to select a word from the list.
+
+\subsubsection*{Directions}
+
+\textbf{Step 1:} Decide how many words you want in your passphrase. A five-word passphrase provides a level of security \textit{much} higher than the passwords most people use. For NSA-proof security, use seven.
+
+\textbf{Step 2:} Roll all four dice at once and write the results down, reading from left to right, on a scrap paper. Make as many of these four-digit groups as you want words in your passphrase.
+
+\textbf{Step 3:} Flip to the word list and look up the corresponding word next to each four-digit number.
+
+\textbf{Step 4:} The words that you have found are your new passphrase! If you wish, roll the dice one more time to choose one word to Capitalize, and again for a digit to add to the end.
+
+\textbf{Step 6:} Come up with a way to remember your phrase. It might be a story, scenario, or sentence that that can remind you of the particular words you chose, in order.
+
+A five-word passphrase is one of 3,656,158,440,062,976 (or about $2^{51}$) alternatives that could have been chosen by this method. With so many possibilities, this passphrase will be very hard to guess by brute force.
+
+\subsubsection*{Example}
+
+Suppose you want a five word passphrase. You will need 5 times 4 or 20 dice rolls. Let's say they come out as:
+
+1, 6, 6, 6, 5, 1, 5, 6, 5, 3, 5, 6, 3, 2, 2, 3, 5, 6, 2, and 6. 
+
+Write down the results on a scrap of paper in groups of four rolls:
+
+1 6 6 6 \\
+5 1 5 6 \\
+5 3 5 6 \\
+3 2 2 3 \\
+5 6 2 6
+
+You then look up each group of five rolls in the Diceware word list by finding the number in the list and writing down the word next to the number:
+
+1666 cognitive \\
+5156 poetic \\
+5356 ribbon \\
+3223 garlic \\
+5626 smelliness
+
+Your passphrase would then be:
+
+cognitive poetic ribbon garlic smelliness
+
+\newpage
+\newgeometry{margin=.6in}
+\fontsize{5}{2mm}\selectfont
+\begin{multicols}{5}
+\noindent\input{wordlist.tex}
+\end{multicols}
+\restoregeometry
