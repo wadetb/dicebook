@@ -16,8 +16,13 @@
 
 \begin{document}
 
+\pagenumbering{gobble}
+
+\input{title.tex}
+
+\newpage
+
 \chapter*{Record of Important Things}
-\thispagestyle{empty}
 
 \begin{center}
 	\includegraphics[width=\textwidth]{gorey.png}
@@ -28,12 +33,9 @@
 \begin{flushright}{Bruce Schneier CTO, Resilient}\end{flushright}
 \end{small}
 
-\newpage
-
-\input{title.tex}
 \input{index.tex}
 
-\clearpage
+\cleardoublepage
 \pagenumbering{arabic}
 \pagestyle{headings}
 
@@ -93,8 +95,17 @@
 \input{page.tex}
 \input{page.tex}
 
+\newpage
+\pagestyle{empty}
+\paragraph{}
+\cleardoublepage
 
 \input{diceware.tex}
+
+\newpage
+\pagestyle{empty}
+\paragraph{}
+\cleardoublepage
 
 \input{qna.tex}
 
