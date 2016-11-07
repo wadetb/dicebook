@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{epigraph}
 
 %\pagestyle{headings}
 
@@ -11,16 +12,21 @@
 
 %http://www.lulu.com/shop/wade-brainerd/password-logbook/hardcover/product-22927496.html
 
+%gsort -R diceware.wordlist | head -n 4 | cut -f2 | tr -d '\n' | tee password | shasum
+
 \begin{document}
 
+\chapter*{Record of Important Things}
 \thispagestyle{empty}
 
-
 \begin{center}
-\vspace*{\fill}
 	\includegraphics[width=\textwidth]{gorey.png}
-\vspace*{\fill}
 \end{center}
+
+\begin{small}
+\textit{Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down. We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.}
+\begin{flushright}{Bruce Schneier CTO, Resilient}\end{flushright}
+\end{small}
 
 \newpage
 
