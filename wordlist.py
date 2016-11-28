@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+import sys
 
-with open('eff_short_wordlist_2_0.txt', 'r') as f:
+with open(sys.argv[1], 'r') as f:
 	words = [l.strip().split('\t') 
 		     for l in f.readlines()]
 
