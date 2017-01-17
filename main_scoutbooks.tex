@@ -1,7 +1,7 @@
-\documentclass[12pt]{book}
+\documentclass[9pt,showtrims]{memoir} %
 \usepackage[utf8]{inputenc}
-\usepackage[paperwidth=6in, paperheight=9in]{geometry}
 \usepackage{graphicx}
+\usepackage{lmodern}
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{ccicons}
@@ -9,7 +9,24 @@
 \usepackage{fmtcount}
 \usepackage{emptypage}
 
-%\pagestyle{headings}
+\setstocksize{5.25in}{3.75in}
+\settrimmedsize{5in}{3.5in}{*}
+\settrims{.125in}{.125in}
+\setlrmarginsandblock{0.2in}{0.2in}{*}
+\setulmarginsandblock{0.25in}{0.25in}{*}
+\setheadfoot{1em}{1em}
+\setheaderspaces{0.1in}{*}{*}
+\checkandfixthelayout
+
+\openany
+
+\makepagestyle{hurried}
+\makeoddhead{hurried}{\hspace{4pt}\thepage}{}{}
+\makeevenhead{hurried}{}{}{\thepage \hspace{4pt}}
+%\makeevenhead{hurried}{}{}{}
+%\makeoddhead{hurried}{}{}{}
+
+\pagestyle{hurried}% Set page style to hurried
 
 % https://www.amazon.com/BookFactory%C2%AE-Password-Passwords-Notebook-JOU-120-MCW/dp/B009YK2GOA/ref=redir_mobile_desktop?ie=UTF8&ref_=aw_cm_cr_asin_lnk
 
@@ -27,91 +44,46 @@
 
 \chapter*{Record of Important Things}
 
-\begin{center}
-	\includegraphics[width=\textwidth]{gorey.png}
-\end{center}
+%\begin{center}
+%	\includegraphics[width=\textwidth]{gorey.png}
+%\end{center}
 
-\begin{small}
 \textit{Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down. We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.}
 \begin{flushright}{Bruce Schneier CTO, Resilient}\end{flushright}
-\end{small}
 
-\input{index.tex}
+\input{index_scoutbooks.tex}
 
 \clearpage
 \pagenumbering{arabic}
-\pagestyle{headings}
 
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
 
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
 
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
+\input{page_scoutbooks.tex}
 
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
-\input{page.tex}
+\input{page_scoutbooks.tex}
 
 \input{diceware.tex}
 
-\cleardoublepage
-
 \newpage
-\newgeometry{margin=.5in}
-\fontsize{7}{3mm}\selectfont
-%\begin{multicols}{5}
-%	\noindent\input{eff_short_wordlist_1.tex}
-%\end{multicols}
+\fontsize{4}{4}\selectfont
 \begin{multicols}{4}
 	\noindent\input{eff_short_wordlist_2_0.tex}
 \end{multicols}
-\restoregeometry
+\normalsize
 
 \input{qna.tex}
 
