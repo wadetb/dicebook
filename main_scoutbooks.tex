@@ -7,26 +7,35 @@
 \usepackage{ccicons}
 \usepackage{url}
 \usepackage{fmtcount}
-\usepackage{emptypage}
+\usepackage{dashrule}
+\usepackage{changepage}
 
-\setstocksize{5.25in}{3.75in}
+%\setstocksize{5.25in}{3.75in}
+%\settrimmedsize{5in}{3.5in}{*}
+%\settrims{.125in}{.125in}
+
+\setstocksize{5in}{3.5in}
 \settrimmedsize{5in}{3.5in}{*}
-\settrims{.125in}{.125in}
-\setlrmarginsandblock{0.2in}{0.2in}{*}
-\setulmarginsandblock{0.25in}{0.25in}{*}
+\settrims{0in}{0in}
+
+\setlrmarginsandblock{.2in}{.2in}{*}
+\setulmarginsandblock{0.4in}{.25in}{*}
 \setheadfoot{1em}{1em}
-\setheaderspaces{0.1in}{*}{*}
+\setheaderspaces{0.19in}{*}{*}
 \checkandfixthelayout
 
 \openany
 
 \makepagestyle{hurried}
-\makeoddhead{hurried}{\hspace{4pt}\thepage}{}{}
-\makeevenhead{hurried}{}{}{\thepage \hspace{4pt}}
-%\makeevenhead{hurried}{}{}{}
-%\makeoddhead{hurried}{}{}{}
+\makeoddhead{hurried}{\large\thepage}{}{}
+\makeevenhead{hurried}{}{}{\large\thepage}
+\pagestyle{hurried}
 
-\pagestyle{hurried}% Set page style to hurried
+\copypagestyle{chapter}{plain}
+\makeoddhead{chapter}{\large\thepage}{}{}
+\makeevenhead{chapter}{}{}{\large\thepage}
+\makeoddfoot{chapter}{}{}{}
+\makeevenfoot{chapter}{}{}{}
 
 % https://www.amazon.com/BookFactory%C2%AE-Password-Passwords-Notebook-JOU-120-MCW/dp/B009YK2GOA/ref=redir_mobile_desktop?ie=UTF8&ref_=aw_cm_cr_asin_lnk
 
@@ -34,22 +43,32 @@
 
 %gsort -R diceware.wordlist | head -n 4 | cut -f2 | tr -d '\n' | tee password | shasum
 
+\title{\LARGE \textbf{Record of Important Things}}
+\date{}
+\renewcommand{\maketitlehookd}{
+	\vspace{.5in}
+	\begin{center}
+	\textit{If found, please return to:}
+	\end{center}
+}
+\setlength{\droptitle}{1in}
+
 \begin{document}
 
 \pagenumbering{gobble}
 
-\input{title.tex}
+\maketitle
+
+\vspace*{\fill}
 
 \newpage
 
-\chapter*{Record of Important Things}
+\vspace*{\fill}
 
-%\begin{center}
-%	\includegraphics[width=\textwidth]{gorey.png}
-%\end{center}
+\chapterprecishere{Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down.
+We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.\par\raggedleft--- \textup{Bruce Schneier}} % \\ CTO of Resilient Systems, Inc.
 
-\textit{Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down. We're all good at securing small pieces of paper. I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.}
-\begin{flushright}{Bruce Schneier CTO, Resilient}\end{flushright}
+\vspace*{\fill}
 
 \input{index_scoutbooks.tex}
 
@@ -79,10 +98,14 @@
 \input{diceware.tex}
 
 \newpage
+\changepage{.15in}{}{}{}{}{}{}{-0.15in}{}
 \fontsize{4}{4}\selectfont
 \begin{multicols}{4}
 	\noindent\input{eff_short_wordlist_2_0.tex}
 \end{multicols}
+
+\changepage{-.15in}{}{}{}{}{}{}{0.15in}{}
+\newpage
 \normalsize
 
 \input{qna.tex}
