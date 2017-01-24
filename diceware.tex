@@ -13,7 +13,7 @@
 
 \newpage
 \setlength{\parindent}{0em}
-\setlength{\parskip}{0.5em}
+\setlength{\parskip}{0.25em}
 
 \subsubsection*{What is a Diceware passphrase?}
 
@@ -39,30 +39,42 @@ Diceware is a method for picking passphrases which uses dice to select words at 
 
 \newpage
 
+\setlength{\parskip}{0.5em}
+
 \subsubsection*{Example}
 
 Suppose you want a five-word passphrase. You will need $5 \times 4$ or 20 dice rolls. Let's say they come out as:
 
-1, 6, 6, 6, 5, 1, 5, 6, 5, 3, 5, 6, 3, 2, 2, 3, 5, 6, 2, 6. 
+\begin{adjustwidth}{2em}{2em}
+\makebox[\linewidth][s]{\textit{1 6 6 6 5 1 5 6 5 3 5 6 3 2 2 3 5 6 2 6}}
+\end{adjustwidth}
 
 Write the results on a scrap of paper in groups of four:
 
-1 6 6 6 \\
+\begin{adjustwidth}{2em}{2em}
+\textit{1 6 6 6 \\
 5 1 5 6 \\
 5 3 5 6 \\
 3 2 2 3 \\
-5 6 2 6
+5 6 2 6}
+\end{adjustwidth}
 
 You then look up each group of five rolls in the Diceware word list by finding the number in the list and writing down the word next to the number:
 
-1666 cognitive \\
+\begin{adjustwidth}{2em}{2em}
+\textit{1666 cognitive \\
 5156 poetic \\
 5356 ribbon \\
 3223 garlic \\
-5626 smelliness
+5626 smelliness}
+\end{adjustwidth}
 
 Your passphrase would then be:
 
-cognitive poetic ribbon garlic smelliness
+\begin{adjustwidth}{2em}{2em}
+\textit{cognitive poetic ribbon garlic smelliness}
+\end{adjustwidth}
 
 This passphrase is one of the 3,656,158,440,062,976 ($6^{20}$) alternatives that could have been chosen by this method.
+
+\setlength{\parskip}{0.25em}

@@ -1,4 +1,4 @@
-\documentclass[9pt,showtrims]{memoir} %
+\documentclass[9pt]{memoir} %,showtrims
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{lmodern}
@@ -9,6 +9,7 @@
 \usepackage{fmtcount}
 \usepackage{dashrule}
 \usepackage{changepage}
+%\usepackage{lua-visual-debug}
 
 %\setstocksize{5.25in}{3.75in}
 %\settrimmedsize{5in}{3.5in}{*}
@@ -19,23 +20,25 @@
 \settrims{0in}{0in}
 
 \setlrmarginsandblock{.2in}{.2in}{*}
-\setulmarginsandblock{0.4in}{.25in}{*}
-\setheadfoot{1em}{1em}
-\setheaderspaces{0.19in}{*}{*}
+\setulmarginsandblock{0.2in}{.5in}{*}
+\setheadfoot{1em}{1.5em}
+\setheaderspaces{0in}{*}{*}
 \checkandfixthelayout
 
 \openany
 
 \makepagestyle{hurried}
-\makeoddhead{hurried}{\large\thepage}{}{}
-\makeevenhead{hurried}{}{}{\large\thepage}
+\makeoddfoot{hurried}{\large\thepage}{}{}
+\makeevenfoot{hurried}{}{}{\large\thepage}
 \pagestyle{hurried}
 
 \copypagestyle{chapter}{plain}
-\makeoddhead{chapter}{\large\thepage}{}{}
-\makeevenhead{chapter}{}{}{\large\thepage}
-\makeoddfoot{chapter}{}{}{}
-\makeevenfoot{chapter}{}{}{}
+\makeoddfoot{chapter}{\large\thepage}{}{}
+\makeevenfoot{chapter}{}{}{\large\thepage}
+
+\copypagestyle{wordlist}{plain}
+\makeoddfoot{wordlist}{}{}{}
+\makeevenfoot{wordlist}{}{}{}
 
 % https://www.amazon.com/BookFactory%C2%AE-Password-Passwords-Notebook-JOU-120-MCW/dp/B009YK2GOA/ref=redir_mobile_desktop?ie=UTF8&ref_=aw_cm_cr_asin_lnk
 
@@ -53,6 +56,8 @@
 }
 \setlength{\droptitle}{1in}
 
+\headstyles{default}
+
 \begin{document}
 
 \pagenumbering{gobble}
@@ -64,7 +69,6 @@
 \newpage
 
 \vspace*{\fill}
-
 
 \begin{adjustwidth}{0.175in}{0.175in}
 \fontsize{9}{11}\selectfont
@@ -112,16 +116,20 @@ I recommend that people write their passwords down on a small piece of paper, an
 \input{diceware.tex}
 
 \newpage
-\changepage{.15in}{}{}{}{}{}{}{-0.15in}{}
-\fontsize{4}{4}\selectfont
+\changepage{.4in}{}{}{}{}{}{}{-0.15in}{}
+
+\pagestyle{wordlist}
+
+\fontsize{4}{4.2}\selectfont
 \begin{multicols}{4}
+	\setlength{\postmulticols}{0in}
 	\noindent\input{eff_short_wordlist_2_0.tex}
+\vspace{-1in}
 \end{multicols}
 
-\changepage{-.15in}{}{}{}{}{}{}{0.15in}{}
-\newpage
+\changepage{-.4in}{}{}{}{}{}{}{0.15in}{}
 \normalsize
-
+\pagestyle{hurried}
 \input{qna.tex}
 
 \input{license.tex}
