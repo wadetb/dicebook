@@ -28,13 +28,13 @@
 \openany
 
 \makepagestyle{hurried}
-\makeoddfoot{hurried}{\large\thepage}{}{}
-\makeevenfoot{hurried}{}{}{\large\thepage}
+\makeoddfoot{hurried}{}{\normalsize\thepage}{}
+\makeevenfoot{hurried}{}{\normalsize\thepage}{}
 \pagestyle{hurried}
 
 \copypagestyle{chapter}{plain}
-\makeoddfoot{chapter}{\large\thepage}{}{}
-\makeevenfoot{chapter}{}{}{\large\thepage}
+\makeoddfoot{chapter}{}{\normalsize\thepage}{}
+\makeevenfoot{chapter}{}{\normalsize\thepage}{}
 
 \copypagestyle{wordlist}{plain}
 \makeoddfoot{wordlist}{}{}{}
@@ -93,6 +93,10 @@ I recommend that people write their passwords down on a small piece of paper, an
 \clearpage
 \pagenumbering{arabic}
 
+\newcommand{\mypagerule}{
+	\vspace{-.125in} \\ \rule{\textwidth}{.4pt}
+}
+
 \input{page_scoutbooks.tex}
 \input{page_scoutbooks.tex}
 \input{page_scoutbooks.tex}
@@ -131,7 +135,6 @@ I recommend that people write their passwords down on a small piece of paper, an
 \normalsize
 \pagestyle{hurried}
 \input{qna.tex}
-
 \input{license.tex}
 
 \end{document}
