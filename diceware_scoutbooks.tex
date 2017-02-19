@@ -1,0 +1,96 @@
+\label{ch:diceware}
+
+\Character[margaret - a hacker]{Margaret}{marge}
+\Character[harriet - a friend]{Harriet}{harriet}
+
+\scene
+
+\begin{drama}
+\StageDir{Two women sit in a dark room in front of a computer.}
+\margespeaks This information needs to stay secret.
+\harrietspeaks Calm down, it's encrypted with a password nobody can guess: r 4 b @ b 1 t \$
+\margespeaks A simple word with substitutions and insertions? You've got to be kidding me, Harriet, a twelve-year-old computer could break that in milliseconds. 
+\harrietspeaks Then you make the password.
+\margespeaks \direct{grabs four dice} I'll make a Diceware passphrase.
+\StageDir{\marge rolls the dice}
+\margespeaks 1 6 6 6; that's \textit{cognitive}.
+\StageDir{She rolls the dice again}
+\margespeaks 5 1 5 6; that's \textit{poetic}.
+\harrietspeaks What's a passphrase?
+\margespeaks A password made from words stuck together. And with enough words chosen randomly, reasonably secure.
+\StageDir{\marge rolls the dice three more times}
+\harrietspeaks How obscure; I'll never remember these numbers.
+\margespeaks 5 3 5 6 3 2 2 3 5 6 2 6; your passphrase is \textit{cognitive poetic ribbon garlic smelliness}.
+\harrietspeaks I won't call that poetic, but I can probably remember it. Thanks, Marge.
+\end{drama}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{.75em}
+
+\subsubsection*{What is a Diceware passphrase?}
+
+A passphrase is a list of words that you type into your computer to let it know for sure that \textit{the person typing is you}. Passphrases differ from passwords only in length.
+
+Diceware is a method for picking passphrases which uses dice to select words at random from a special list. Each word in the list is preceded by a four digit number. All the digits are between one and six, allowing you to use the outcomes of four dice rolls to select a word from the list.
+
+\subsubsection*{Directions}
+
+\begin{itemize}[leftmargin=*]
+
+\setlength\itemsep{.75em}
+
+\item[1] Decide how many words you want in your passphrase. A five-word passphrase provides a level of security \textit{much} higher than the passwords most people use. For NSA-proof security, use seven words.
+
+\item[2] Roll all four dice at once and write the results down, reading from left to right, on a scrap of paper. Make as many of these four-digit groups as you want words in your passphrase.
+
+\item[3] Flip to the word list and look up the corresponding word next to each four-digit number.
+
+\item[4] The words you have found are your new passphrase!
+
+\item[5] Come up with a way to remember your phrase. It might be a story, mental picture, or sentence that will remind you of the phrase you generated.
+
+\end{itemize}
+
+Your passphrase is one of the 3,656,158,440,062,976 ($6^{20}$) alternatives that could have been chosen by this method.
+
+%\setlength{\parskip}{0.5em}
+%
+%\subsubsection*{Example}
+%
+%Suppose you want a five-word passphrase. You will need $5 \times 4$ or 20 dice rolls. Let's say they come out as:
+%
+%\begin{adjustwidth}{2em}{2em}
+%	\makebox[\linewidth][s]{\textit{1 6 6 6 5 1 5 6 5 3 5 6 3 2 2 3 5 6 2 6}}
+%\end{adjustwidth}
+%
+%Write the results on a scrap of paper in groups of four:
+%
+%\begin{adjustwidth}{2em}{2em}
+%	\textit{1 6 6 6 \\
+%		5 1 5 6 \\
+%		5 3 5 6 \\
+%		3 2 2 3 \\
+%		5 6 2 6}
+%\end{adjustwidth}
+%
+%You then look up each group of five rolls in the Diceware word list by finding the number in the list and writing down the word next to the number:
+%
+%\begin{adjustwidth}{2em}{2em}
+%	\textit{1666 cognitive \\
+%		5156 poetic \\
+%		5356 ribbon \\
+%		3223 garlic \\
+%		5626 smelliness}
+%\end{adjustwidth}
+%
+%Your passphrase would then be:
+%
+%\begin{adjustwidth}{2em}{2em}
+%	\textit{cognitive poetic ribbon garlic smelliness}
+%\end{adjustwidth}
+%
+%This passphrase is one of the 3,656,158,440,062,976 ($6^{20}$) alternatives that could have been chosen by this method.
+%
+%%(\approx$2^{51}$) 
+%
+%\setlength{\parskip}{0.25em}

@@ -9,6 +9,7 @@
 \usepackage{fmtcount}
 \usepackage{dashrule}
 \usepackage{changepage}
+\usepackage{dramatist}
 %\usepackage{lua-visual-debug}
 
 %\setstocksize{5.25in}{3.75in}
@@ -66,32 +67,16 @@
 
 \vspace*{\fill}
 
-\newpage
-
-\vspace*{\fill}
-
-\begin{adjustwidth}{0.175in}{0.175in}
-\fontsize{9}{11}\selectfont
-
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-
-\textit{Simply, people can no longer remember passwords good enough to reliably defend against dictionary attacks, and are much more secure if they choose a password too complicated to remember and then write it down.
-We're all good at securing small pieces of paper. 
-I recommend that people write their passwords down on a small piece of paper, and keep it with their other valuable small pieces of paper: in their wallet.}
-\par\flushright\textup{Bruce Schneier} % \\ CTO of Resilient Systems, Inc.
-
-\end{adjustwidth}
-\normalsize
-
-\vspace*{\fill}
-
+\input{quote_scoutbooks.tex}
 \input{index_scoutbooks.tex}
 
 \clearpage
 \pagenumbering{arabic}
+
+\input{diceware_scoutbooks.tex}
+\input{wordlist_scoutbooks.tex}
+
+\cleardoublepage
 
 \newcommand{\mypagerule}{
 	\vspace{-.125in} \\ \rule{\textwidth}{.4pt}
@@ -117,23 +102,6 @@ I recommend that people write their passwords down on a small piece of paper, an
 
 \input{page_scoutbooks.tex}
 
-\input{diceware.tex}
-
-\newpage
-\changepage{.4in}{}{}{}{}{}{}{-0.15in}{}
-
-\pagestyle{wordlist}
-
-\fontsize{4}{4.2}\selectfont
-\begin{multicols}{4}
-	\setlength{\postmulticols}{0in}
-	\noindent\input{eff_short_wordlist_2_0.tex}
-\vspace{-1in}
-\end{multicols}
-
-\changepage{-.4in}{}{}{}{}{}{}{0.15in}{}
-\normalsize
-\pagestyle{hurried}
 \input{qna.tex}
 \input{license.tex}
 
